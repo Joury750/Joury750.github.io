@@ -1,119 +1,73 @@
 <!--CV form-->
-<!doctype html> <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-<title>CV form</title> <meta charset="UTF-8" >
-</head> 
-
-<body>
+    <haed>
+        <meta charset="UTF-8"> 
+        <title>CV form</title>
+    </haed>
+  
+  
+  
+    <body>
         <h1>CV FORM</h1>
-<form action="index.html" method="Get">
-<fieldset>
-<legend>Personal Information </legend>
-<label for="Fname">Name:</label> <br>
-<input type="text" id="Fname" name="fn" >
+<form mrthod="Get" action = "index.html" target = "_blank" autocomplete="off">
+    <!--هذا رابط relative ف م يكتب الwww وهذي الاشياء-->
+    <fieldset>
+        <legend>Personal Information</legend>
+<label for = "name ">Name :</label><br>
+<input type = "text" id = "name" name = "name">
 
 <br><br>
 
-<!-- Radio-->
-<label for="male">Gender:</label>
-<input type="radio" id="male" name="gender" value='male'>
- <label for="male">Male</label>
-<input type="radio" id="female" name="gender" value='female'> 
-<label for='female'>Female </label>
-
-<br><br> 
 
 
+<!—radio—>
 
-<!--tel type-->
-<label for="t">Enter a phone number:</label><br><br>
-<input type="tel" id="t" name="phone" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' placeholder="555-55-555"> format 555-55-555
+<label >Gender :</label>
+<!—radio  1—>
+
+<input type="radio"   id="male"   name="gender" value="a">
+<lable for ="male" >Male</lable>
+
+
+<!—radio  2—>
+
+<input type="radio"   id="female"   name="gender" value="f">
+<lable for ="female" >Female</lable>
+
+<br></br>
+
+<label for "tel">Enter phone number :</label>
+<input type = "tel" id = "tel" name = "phone number" pattern="[0-9]{3}.[0-9]{2}.[0-9]{3}" placeholder="555-55-555">
+
 <br><br>
 
-<!-- Url -->
-<label for="linkedin">Your linkedin page:</label> <input type='url' id='linkedin' name='ln'>
 
-<!-- email -->
-<label for="em">EMAIL:</label>
-<input type="email" id="em" name="email" required >
- <br><br>
+
+<!--url type-->
+<label for "linkden">Your linkdin page :</label>
+<input type "url" id = "linkden" name"wpage">
+
+
+<!--Email-->
+<label for "email">Email :</label>
+<input type "email" id = "email" name"e">
+
+<br><br>
 
 </fieldset>
-
-
-<!-- number -->
-<br><br>
-
-<label for='n'> Years of experience(between 3 and 10):</label> <input type='number' id='n' name='Yoe' min="3" max="10"> 
-
-<br><br>
-
-<!-- range -->
-<label for='r'> expected salary:</label>
-4000
-<input type='range' id='r' name='rs' min="4000" max="10000" >
-10000
-
-<br><br> 
-
-
-<!-- checkbox-->
-<label >language:</label><br>
-<input type='checkbox' id='c1' name='lang' value ='Arabic'>
-<label for='c1'> Arabic</label>  <br>
-<input type='checkbox' id='c2' name='lang' value='English'>
-<label for='c1'>English</label>
-
-<br> <br>
-
-
-<!-- file -->
-<label for="f">Uplaod your CV :</label> <input type='file' id='f' name='cvfile' > 
-
-<br><br>
-
-<!--week-->
-<label for="w">The nearest week you can start wrok </label> <input type="week" id='w' name='nw'>
-
-<br><br>
-
-<!-- MONTH-->
-<label for="m">The nearest month you can start wrok </label> <input type="month" id='m' name='nm'>
-
-<br><br>
-
-
-<!-- Time-->
-<label for="t1">The best time to work </label>
-<input type="time" id='t1' name='bt'> 
-
-<br><br>
+<label for "ex" >years of experience(between 3 and 10)</label>
+<input = "number" id = "ex" name = "ex" min = "3" max = "10">
 
 
 
-<!-- list-->
-<label for='major'>Majors</label> <input list="major" name="ms"> 
-<datalist id="majors">
-<option value="cs"> 
-    <option value="IT"> 
-        <option value="Da">
-</datalist>
 
-<br><br>
+<input type ="submit" value = "send">
+<input type ="reset" value = "reset">
 
-
-<!-- texterea-->
-<label for='cp'>Why you want to work with us? </label>   <br>
-<textarea id='cp' name='comment' rows='5' cols='100'>
-</textarea><br>
-<input type='submit' value="send"> 
-<input type="reset" value="reset">
-
-
-</form> 
+</form>
 
     </body>
-  
-  
+
     </html>
