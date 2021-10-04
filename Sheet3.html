@@ -21,9 +21,10 @@
 <!—radio—>
     <fieldset>
         <legend>Personal Information:</legend>
-
+        
+        <form action = "/action_page.php" method = "post">
 <label for = "fname ">First name :</label><br>
-<input type = "text" id = "Fname" Firstname = "Fname">
+<input type = "text" id = "Fname" Firstname = "Fname" required>
 <br>
 <label for = "lname ">Last name :</label><br>
 <input type = "text" id = "Lname" Lastname = "Lname" size="20" maxlength="6">
@@ -42,7 +43,7 @@
 <!--Email-->
 <br>
 <label for ="email">Email :</label><br>
-<input type = "email" id = "email" name ="e" method="post" autocomplete="off">
+<input type = "email" id = "email" name ="e" method="post" autocomplete="off" required>
 
 <!—radio 2—>
 <br>
@@ -107,7 +108,8 @@
     <br><br>
     <input type ="submit" value = "send">
    
-    
+    <!--لايوجد اي قيود -->
+   <POST : No restrictions Binary data is also allowed  ></POST>
     
 
 </form>
