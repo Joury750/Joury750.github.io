@@ -1,0 +1,43 @@
+<!--Sheet5 2-->
+
+    <!DOCTYPE html>
+<html>
+
+ <meta charst ="utf-8">
+
+<body>
+
+<h1>Task2 In Sheet5</h1>
+Enter Your Name: <input type="text" id="name">  <br>
+
+
+<button onclick="GetTimeFunction()">  Try it  </button>
+
+<p id="demo">  </p>
+
+<script>
+
+function GetTimeFunction() {
+
+var Name = document.getElementById("name").value;
+var CurrentDate = new Date();
+var CurrentHours = CurrentDate.getHours();
+var greeting;
+
+
+
+    if (CurrentHours < 12) 
+      greeting = "Good Morning";
+          
+      else (CurrentHours >= 12 &&CurrentHours <= 24) 
+      greeting = "Good Afternoon";
+   
+ 
+     document.getElementById("demo").innerHTML = "<h1>" + greeting + "&nbsp;" + Name + "</h>";
+    }
+
+
+</script>
+
+</body>
+</html>

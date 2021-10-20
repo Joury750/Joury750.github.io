@@ -1,0 +1,77 @@
+<!--Sheet5 3-->
+<!--BMI-->
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta charst ="utf-8">
+
+ <title>BMI Calculator</title>
+
+ <!-- Less than 18.5  Underweight
+ 18.5 to 24.9        heaithyweight
+ 25-29.9             Overweight -->
+ 
+ 
+   
+   <body>
+ <h1>BMI Calculator Create Using JavaScript</h1>
+
+ <label>Your Weight(kg): </label>&nbsp;
+<input type="text" name="weight" id="weight">
+</input><br><br>
+
+ <label>Your Height(cm): </label>&nbsp;
+<input type="text" name="height" id="height">
+</input><br><br>
+
+<input type="button" name="btncal" value="Calculate BMI"
+onclick="calculatebmi()">
+</input><br><br>
+
+ <label>Your BMI :</label> <span id="bmi"></span><br></br>
+ <label>This Means: Your BMI :</label>
+<span id="msg"></span>
+
+
+ <!-- Java Script code -->
+ <script language="javascript">
+
+            // function to calculate BMI
+ function calculatebmi()
+ {
+var weight=
+parseFloat(document.getElementById("weight").value);
+var height=
+parseFloat(document.getElementById("height").value);
+ var heightinM = (height / 100)
+            
+ 
+           // BMI calcualtion
+ var bmi_val = weight /(heightinM * heightinM);
+ var bmi_inter="";
+ 
+           // to find Interpretation of BMI
+ if (bmi_val < 18.5)
+ {
+ bmi_inter="Underweight";
+ }
+ else if(bmi_val >= 18.5 && bmi_val <= 24.9)
+ {
+ 
+  bmi_inter="Healthy";
+ }
+ else if(bmi_val >= 25.0 && bmi_val <= 29.9)
+ {
+ bmi_inter="Overweight";
+ }
+
+document.getElementById("bmi").innerHTML = bmi_val;
+var msg = "That You Are "+bmi_inter;
+document.getElementById("msg").innerHTML = msg; }
+ </script>
+<br> </br>
+
+
+</body>
+</html>

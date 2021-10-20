@@ -1,0 +1,64 @@
+<!--Form-->
+<!DOCTYPE html>
+<html>
+
+    <html lang="en">
+
+      
+        <haed>
+            <meta charset="UTF-8"> 
+            
+
+            <script>
+                function validateForm() {
+                  let x = document.forms["myForm"]["fname"].value;
+                  if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                  }
+                }
+                </script>
+        </haed>
+     
+
+      <form>
+      
+        <body>
+            <h1>SING UP</h1>
+
+    Full Name :
+    <input type = "text" id = "name" name = "name">
+    
+    <br><br>
+
+    User Name:
+    <input type = "text" id = "uname" name = "uname">
+    
+
+    <br><br>
+
+    Password:
+    <input type="password" id="pwd" name="pwd">
+
+
+    <br><br>
+
+    Confirm Password:
+    <input type="password" id="pwd2" name="pwd">
+
+
+
+
+
+
+
+
+    <br><br>
+    <input type="submit" value="SING UP">
+
+
+
+
+        </form>
+
+</html>
