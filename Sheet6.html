@@ -1,64 +1,108 @@
 <!--Form-->
 <!DOCTYPE html>
 <html>
-
     <html lang="en">
-
-      
         <haed>
             <meta charset="UTF-8"> 
-            
-
-            <script>
-                function validateForm() {
-                  let x = document.forms["myForm"]["fname"].value;
-                  if (x == "") {
-                    alert("Name must be filled out");
-                    return false;
-                  }
-                }
-                </script>
-        </haed>
-     
-
-      <form>
       
+      <style>
+       
+      </style>
+
+<script type = "text/javascript">
+
+    function validateForm() {
+   
+
+    var pass= document.getElementById("pass").value;
+    var pass2 = document.getElementById("pass2").value;
+    var name1 = document.getElementById("name").value;
+	  var name2 = document.getElementById("username").value;
+    
+   //مايكون اسم المستخدم فارغًا
+    if(name1 == "") {
+      document.getElementById("blankMsg").innerHTML = "*Should not empty";
+      return false;
+    }
+   
+    //only letters 
+    if(!isNaN(name1)){
+      document.getElementById("blankMsg").innerHTML = "*Only letter is allowed";
+      return false;
+    }
+    if(!isNaN(name2)){
+      document.getElementById("charMsg").innerHTML = "**Only letters is allowed";
+      return false;
+    } 
+
+    //لا يجب أن يكون نفس اسم المستخدم
+    if(name1 = name2) {
+      document.getElementById("charMsg").innerHTML = "*Should not have the same name of user-name";
+      return false;
+  
+    if(pass == "") {
+      document.getElementById("message1").innerHTML = "*Fill the password please!";
+      return false;
+    }
+    
+    if(pass2 == "") {
+      document.getElementById("message2").innerHTML = "*Enter the password please!";
+      return false;
+    } 
+   
+   //Should be 6- 10 length.
+    if(pass.length < 6) {
+      document.getElementById("message1").innerHTML = "*Password length must be atleast 6 characters";
+      return false;
+    }
+    if(pass.length > 10) {
+      document.getElementById("message1").innerHTML = "*Password length must not exceed 10 characters";
+      return false;
+    }
+
+  //Confirm Password: should equal to password
+    if(pass != pass2) {
+      document.getElementById("message2").innerHTML = "*Your Pass does not match";
+      return false;
+    } else {
+      
+      document.write(" Submitted ");
+    }
+ }}
+</script>
+
+
+     
         <body>
             <h1>SING UP</h1>
 
-    Full Name :
-    <input type = "text" id = "name" name = "name">
+      <form onsubmit="return validateForm()"> 
+
+      <!-- Enter fullname -->
+      Full name:
+      <input type="text" id="name" >
+      <span id = "blankMsg" style="color:red"> </span> <br><br>
+      
+      <!-- Enter user name -->
+      User Name:
+      <input type="text" id="username">
+      <span id = "charMsg" style="color:red"> </span> <br><br>
+
+      <!-- Enter password -->
+      Password:
+      <input type="password" id="pass" >
+      <span id = "message1" style="color:red"> </span> <br><br>
+      
+
+      <!--Enter confirm password -->
+      Confrim Password:
+      <input type="password" id="pass2">
+      <span id = "message2" style="color:red"> </span> <br><br>
+     
     
-    <br><br>
+      <input type="submit" value="SIGN UP">
+  
 
-    User Name:
-    <input type = "text" id = "uname" name = "uname">
-    
-
-    <br><br>
-
-    Password:
-    <input type="password" id="pwd" name="pwd">
-
-
-    <br><br>
-
-    Confirm Password:
-    <input type="password" id="pwd2" name="pwd">
-
-
-
-
-
-
-
-
-    <br><br>
-    <input type="submit" value="SING UP">
-
-
-
-
-        </form>
-
+    </form>
+    </body>
 </html>
