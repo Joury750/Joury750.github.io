@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>  
+<html>
+
+
+<head>
+<style>
+.error { 
+    color: #FF0000; 
+}
+</style>
+</head>
+
+
+<body>  
+
+<?php
+
+$Username "";
+$Fullname "";
+$Email Address""";
+$Password="";
+$Confirm Password="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["Username"])) {
+    $Username = "UserName is required";
+  } else {
+    $Username = test_input($_POST["Username"]);
+  }
+
+
+  if (empty($_POST["Fullname"])) {
+    $Fullname = "FullName is required";
+  } else {
+    $Fullname = test_input($_POST["Fullname"]);
+  }
+
+  
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+?>
+
+
+
+<?php
+echo $Username;
+echo "";
+echo $FullName;
+echo "";
+echo $Email Address;
+echo "";
+echo $pwd;
+echo "";
+echo $pass2;
+echo "";
+
+
+
+?>
+
+<h1>SING UP</h1>
+
+<form>
+UserName: <input type="text" name="name">
+  <span class="error">* <?php echo $Username;?></span>
+  <br><br>
+FullName: 
+<input type="text" name="name">
+  <span class="error">* <?php echo $FullName;?></span>
+<br></br>
+Email Address: 
+<input type="text" name="email">
+  <span class="error">* <?php echo $Email Address;?></span>
+  <br><br>
+Password 
+<input type="password" id="pwd" name="pwd">
+  <span class="error">* <?php echo $pwd;?></span>
+  <br><br>
+Confrim Password:
+<input type="password" id="pass2">
+<span class="error">* <?php echo $pass2;?></span>
+<br><br>
+
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="a">
+  <label for="vehicle1"> I agree to website agreemet</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="b">
+  <label for="vehicle2"> Send me Email for news</label><br>
+
+  <input type="submit" name="submit" value="Sing UP">  
+</form>
+
+
+
+</body>
+</html>

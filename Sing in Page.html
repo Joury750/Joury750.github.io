@@ -1,27 +1,109 @@
+    <!-- form -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-<title>Sign up | Save A Live</title>
+ <html lang="en">
+  <head>
+       <title>Sign up | New Account</title>
 <meta charset="utf-8">
+  
+  <style>
+ 
+   .tape {
+     overflow: hidden;
+     background-color: rgb(158, 34, 34);
+   }
+   
+   .tape a {
+     float: left;
+     color: rgb(8, 8, 8);
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 20px;
+   }
+   
+   .tape a:hover {
+     background-color: #ddd;
+     color: rgb(8, 8, 8);
+   }
+   
+   .tape a.active {
+     background-color:rgb(241, 236, 202);
+     color: rgb(8, 8, 8);
+     padding: 14px 16px;
+     font-size: 20px;
+   }
+ 
+    div.a {
+     text-align: center;
+     text-transform:uppercase;
+     color: rgb(158, 34, 34);
+    }
+  
+    .logo{
+   position:relative;
+   left:87%;
+ }
+ legend{
+ color:rgb(158, 34, 34);
+}
+  .e{ color:red;
+  }
+</style>
+<script>
+   function validateForm(){
+  var r = true;
+  var x=document.getElementById("Fname").value;
+  // name should only letter
+  var regEx = /^[A-Za-z]+$/;
+  if (!(x.match(regEx)))
+  {document.getElementById("e1").innerHTML ="* only letter is allowed";
+
+  document.getElementById("Fname").style.borderColor="red";
+  r= false;
+  }
+  else
+  {document.getElementById("e1").innerHTML ="";
+  document.getElementById("Fname").style.borderColor="black";
+  }
+}
+</script>
 </head>
 
 <body>
+  <img src="logo.png" width="200" height="200" class="logo" font-size="10px">
+  
+  <!-- شريط التنقل -->
+  <div class="tape">
+    <a class="active" href="#home">Home</a>
+    <a href="Overview">Overview</a>
+    <a href="About Donation">About Donation</a>
+    <a href="Register">Register</a>
+    <a href="Sign in">Sign in</a>
+    <a href="Conditions for donating blood">Conditions for donating blood</a>
+    <a href="Donation Places">Donation Places</a>
+    <a herf="Posters">Posters</a>
+    <a href="FAQs">FAQs</a>
+    <a herf="Contact">Contact Us </a>
+    
+  </div>
+    
+    <div style="padding-left:16px">
+
     <h1>Create an account</h1>
     <p>Be a hero, and creat your account</p> 
     <p>YOUR BLOOD SAVE LIFES. Everyone may become a hero</p>
+
       <!-- ues form -->
-      <form >
-      
+      <form onsubmit="return validateForm()">
  <fieldset>
-   <legend>Personal information</legend>
+   <legend>Personal Information</legend>
    <!-- first a first name -->
       <label for="Fname">First Name:</label>
       <br>
-     <input type="text" id="Fname" name="Fname" required>
+     <input type="text" id="Fname" name="Fname" required> <span id="e1"></span>
           <br>
    <!-- Not allowed to enter more than 6 characters in last name -->
-          <label for="Lname">last Name:</label>
+          <label for="Lname">Last Name:</label>
           <br>
           <input type="text" id="Lname" name="Lname" maxlength="6">
            <br>
@@ -31,15 +113,15 @@
             <input type="date" name="born" min="1900-00-00" max="2003-01-01">
             <!-- ID -->
            <br>
-       <label for ="tel">ID :</label><br>
+       <label for ="tel">ID:</label><br>
      <input type = "tel" id = "tel" name = "ID" method="post" autocomplete="off">
              <!--Phone number-->
         <br>
-       <label for ="tel">Phone number :</label><br>
+       <label for ="tel">Phone number:</label><br>
      <input type = "tel" id = "tel" name = "phone number" method="post" autocomplete="off">
             <!--Email-->
           <br>
-<label for ="email">Email :</label><br>
+<label for ="email">Email:</label><br>
 <input type = "email" id = "email" name ="e" method="post" autocomplete="off" required>
             
             
@@ -49,13 +131,13 @@
                <fieldset>
                
                  <legend>Information</legend>
-            <label for="">Choose blood type:</label>
+            <label for="">Choose Your blood type:</label>
             <br>
              <input list="Classe" name="Classe">
             <datalist id="Classe">
             <!-- classes -->
              <option value="A+"></option>
-            <option value="A-"></option>
+             <option value="A-"></option>
              <option value="B+"></option>
              <option value="B-"></option>
              <option value="O+"></option>
@@ -72,7 +154,7 @@
         </fieldset>
         
          <fieldset>
-         <legend>Heath Information:</legend>
+         <legend>Heath Information</legend>
       <label for=""> How healthy do you feel in general? </label>
         <br>
         
@@ -97,3 +179,18 @@
     </body>
    </form>
  </html>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+        
+        
+        
+        
+        
